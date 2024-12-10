@@ -336,8 +336,7 @@ export const AudiogramComposition: React.FC<AudiogramCompositionSchemaType> = ({
 									WebkitTextStroke: '2px black',
 								}}
 							>
-								brainrotjs
-								<br></br>.com 🧠
+								numerade.com 📺 👀
 							</div>
 							<div
 								style={{
@@ -359,14 +358,14 @@ export const AudiogramComposition: React.FC<AudiogramCompositionSchemaType> = ({
 						</div>
 					</div>
 				</Sequence>
-				<Sequence from={durationInFrames - 3 * fps}>
+				{/* <Sequence from={durationInFrames - 3 * fps}>
 					<OffthreadVideo
 						startFrom={20}
 						muted
 						className={`absolute -left-[1px] -top-[1px] h-full w-[101%] object-cover z-50 `}
 						src={'https://images.smart.wtf/brainrot.mp4'}
 					/>
-				</Sequence>
+				</Sequence> */}
 			</AbsoluteFill>
 		</div>
 	);
