@@ -26,11 +26,11 @@ async function cleanupResources() {
 const agents = [
 	// 'BARACK_OBAMA',
 	// 'BEN_SHAPIRO',
-	'JORDAN_PETERSON',
-	'JOE_ROGAN',
-	// 'DONALD_TRUMP',
+	// 'JORDAN_PETERSON',
+	// 'JOE_ROGAN',
+	'DONALD_TRUMP',
 	// 'MARK_ZUCKERBERG',
-	// 'JOE_BIDEN',
+	'JOE_BIDEN',
 	// 'LIL_YACHTY',
 	// 'RICK_SANCHEZ',
 ];
@@ -52,7 +52,7 @@ async function main() {
 
 	// CHANGE THIS VALUE FOR A CUSTOM VIDEO TOPIC
 	const videoTopic =
-		'Jordan Peterson is being eaten by a bear and joe rogan is trying to kiss the bear';
+		'Describe the effects of quantitative easing on the economy';
 	const aiGeneratedImages = true;
 	const fps = 20;
 	const duration = 1; //minute
