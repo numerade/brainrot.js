@@ -7,13 +7,10 @@
 
 import { Config } from '@remotion/cli/config';
 import { enableTailwind } from '@remotion/tailwind';
-import { getActualConcurrency } from '@remotion/renderer';
-
-const concurrency = getActualConcurrency(); // Automatically resolves to 2
 
 Config.setVideoImageFormat('jpeg');
 Config.setOverwriteOutput(true);
-Config.setConcurrency(concurrency);
+Config.setConcurrency(2);
 // Config.setChromiumMultiProcessOnLinux(true);
 
 // This template processes the whole audio file on each thread which is heavy.
