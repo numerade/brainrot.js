@@ -37,7 +37,7 @@ const agents = [
 
 const local = true;
 
-async function main() {
+async function main(customVideoTopic) {
 	const randomTopic = topics[Math.floor(Math.random() * topics.length)];
 	let agentAIndex = Math.floor(Math.random() * agents.length);
 	let agentBIndex;
@@ -50,9 +50,7 @@ async function main() {
 	const agentA = agents[0];
 	const agentB = agents[1];
 
-	// CHANGE THIS VALUE FOR A CUSTOM VIDEO TOPIC
-	const videoTopic =
-		'Describe the entire process of photosynthesis';
+	const videoTopic = customVideoTopic || randomTopic;
 	const aiGeneratedImages = true;
 	const fps = 20;
 	const duration = 1; //minute
@@ -87,6 +85,8 @@ async function main() {
 	});
 }
 
+// Update the self-executing function to pass command line arguments
 (async () => {
-	await main();
+	const customTopic = process.argv[2]; // Get the topic from command line arguments
+	await main(customTopic);
 })();

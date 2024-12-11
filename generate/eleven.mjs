@@ -165,14 +165,17 @@ async function generateAudio(voice_id, person, line, index) {
 		throw new Error(`Server responded with status code ${response.status}`);
 	}
 
-	const audioStream = fs.createWriteStream(
-		`public/voice/${person}-${index}.mp3`
-	);
-	response.body.pipe(audioStream);
+	// Create write stream
+	const audioStream = fs.createWriteStream(`public/voice/${person}-${index}.mp3`);
+	
+	// Wait for the entire response before piping
+	const buffer = await response.buffer();
+	audioStream.write(buffer);
+	audioStream.end();
 
 	return new Promise((resolve, reject) => {
 		audioStream.on('finish', () => {
-			resolve('Audio file saved as output.mp3');
+			resolve('Audio file saved successfully');
 		});
 		audioStream.on('error', reject);
 	});
