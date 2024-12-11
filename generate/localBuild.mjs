@@ -52,7 +52,7 @@ async function main() {
 
 	// CHANGE THIS VALUE FOR A CUSTOM VIDEO TOPIC
 	const videoTopic =
-		'Describe the effects of quantitative easing on the economy';
+		'Describe the entire process of photosynthesis';
 	const aiGeneratedImages = true;
 	const fps = 20;
 	const duration = 1; //minute
