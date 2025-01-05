@@ -326,6 +326,8 @@ export const AudiogramComposition: React.FC<AudiogramCompositionSchemaType> = ({
 						<div className="relative w-full h-[50%]">
 							<OffthreadVideo
 								muted
+								controls={false}
+								playbackRate={1}
 								className=" h-full w-full object-cover"
 								src={staticFile(videoFileName)}
 							/>
