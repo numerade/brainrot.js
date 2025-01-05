@@ -338,7 +338,7 @@ export const AudiogramComposition: React.FC<AudiogramCompositionSchemaType> = ({
 									WebkitTextStroke: '2px black',
 								}}
 							>
-								numerade.com 📺 👀
+								numerade.com
 							</div>
 							<div
 								style={{
