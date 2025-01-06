@@ -40,10 +40,10 @@ def main():
                 continue
                 
             # Construct S3 key
-            s3_key = f"{topic_id}-{slug}.mp4"
+            s3_key = f"brainrot/{topic_id}-{slug}.mp4"
             
             # Upload to S3
-            upload_to_s3(video_path, 'com.numerade/brainrot', s3_key)
+            upload_to_s3(video_path, 'com.numerade', s3_key)
             
             # Clean up local video file
             try:
